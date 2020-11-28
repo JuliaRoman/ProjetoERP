@@ -76,12 +76,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ERPOrcamentoDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmConfig.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,12 +100,6 @@
     <Compile Include="frmGerarOrcamento.Designer.cs">
       <DependentUpon>frmGerarOrcamento.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCustos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmCustos.Designer.cs">
-      <DependentUpon>frmCustos.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmPesquisarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,9 +121,6 @@
     <Compile Include="Operacoes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmConfig.resx">
       <DependentUpon>frmConfig.cs</DependentUpon>
     </EmbeddedResource>
@@ -147,9 +132,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmGerarOrcamento.resx">
       <DependentUpon>frmGerarOrcamento.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmCustos.resx">
-      <DependentUpon>frmCustos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPesquisarCliente.resx">
       <DependentUpon>frmPesquisarCliente.cs</DependentUpon>

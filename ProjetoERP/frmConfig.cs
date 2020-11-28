@@ -17,11 +17,7 @@ namespace ProjetoERP
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        //caixa de dialogo de pastas que retorna o caminho onde sereao salvos os orçamentos gerados
         private void button1_Click(object sender, EventArgs e)
         {
             FolderBrowserDialog fbd = new FolderBrowserDialog();
@@ -31,6 +27,7 @@ namespace ProjetoERP
                 textBox1.Text = fbd.SelectedPath;
         }
 
+        //caixa de dialogo para selecionar o arquivo base, que vem jonto ao programa
         private void button2_Click(object sender, EventArgs e)
         {
             var fileContent = string.Empty;
@@ -53,12 +50,14 @@ namespace ProjetoERP
         {
             string modelo = textBox2.Text;
             string caminho = textBox1.Text;
+            //atualização dos valores de caminhos nas configurações
             Properties.Settings.Default.arquivoModelo = modelo;
             Properties.Settings.Default.caminhoExcel = caminho;
             Properties.Settings.Default.Save();
             this.Close();
         }
 
+        //carrega os caminhos das configurações
         private void frmConfig_Load(object sender, EventArgs e)
         {
             textBox1.Text = Properties.Settings.Default.caminhoExcel;

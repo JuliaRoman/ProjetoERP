@@ -63,7 +63,6 @@
             this.label1.Size = new System.Drawing.Size(249, 17);
             this.label1.TabIndex = 2;
             this.label1.Text = "Pasta onde documentos serão salvos:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 

@@ -24,7 +24,7 @@ namespace ProjetoERP
         }
 
 
-
+        //caminhos dos arquivos
         string pastaSalvar = Properties.Settings.Default.caminhoExcel;
         string caminhoExcel = Properties.Settings.Default.arquivoModelo;
 
@@ -51,7 +51,7 @@ namespace ProjetoERP
                 celCliente = mtbCelClienteBanco.Text;
                 telCliente = mtbTelClienteBanco.Text;
             }
-
+            //mais valores presentes no formulario
             string nomeContato = txbContato.Text;
             string materialPeca = txbMaterialProduto.Text;
             double diametroPeca = Convert.ToDouble(txbDiametroProduto.Text);
@@ -95,7 +95,7 @@ namespace ProjetoERP
             double valorMaoDeObra = Convert.ToDouble(Operacoes.pesquisaValorCustoPorNome("mao de obra"));
 
 
-            //valores calculados
+            //cálculo de valores do orçamento
             double superficieTrabalhoDecimetro = diametroRevest * comprimentoRevest;
             double qtdRevestimento = 0;
             qtdRevestimento = superficieTrabalhoDecimetro * espessuraRevest * fator;
@@ -112,7 +112,7 @@ namespace ProjetoERP
             double valorQtdFinal = valorFinal * qtdPeca;//contabilizando qtd de peças
             string numProposta = geraNumProposta();//ordem
 
-
+            //abrindo o arquivo excel base para a edição
             Excel.Application xlApp = new Excel.Application();
             Excel.Workbook xlWorkbook;
             Excel.Worksheet xlWorksheet;
@@ -120,7 +120,7 @@ namespace ProjetoERP
             xlWorkbook = xlApp.Workbooks.Open(caminhoExcel);
             xlWorksheet = xlWorkbook.Worksheets["ref"];
 
-
+            //inserindo valores
             xlWorksheet.Cells[2, 3] = nomeCliente;
             xlWorksheet.Cells[2, 4] = nomeContato;
             xlWorksheet.Cells[2, 5] = emailCliente;
@@ -178,6 +178,7 @@ namespace ProjetoERP
             xlWorksheet.Cells[2, 46] = valorFinal;
             xlWorksheet.Cells[2, 47] = valorPorDecimetro;
 
+            //salvando o arquivo como um novo arquivo, concatenando o diretório com o numero de proposta
             xlWorkbook.SaveAs(pastaSalvar + @"\orc_" + numProposta + ".xlsm");
             xlWorkbook.Close();
             xlApp.Quit();
@@ -199,7 +200,6 @@ namespace ProjetoERP
             return valores[3];
         }
 
-
         //deixa visivel ou invisivel a goupbox de insercao manual de dados
         private void btnDadosManuais_Click(object sender, EventArgs e)
         {
@@ -208,8 +208,6 @@ namespace ProjetoERP
             else
                 groupBoxManual.Visible = true;
         }
-
-
 
         //comando padrao gerado pelo visual studio
         private void frmGerarOrcamento_Load(object sender, EventArgs e)
@@ -266,6 +264,8 @@ namespace ProjetoERP
 
             }
         }
+
+        //comandos que ajustam as masked text box
         private void mtbCelClienteBanco_Click(object sender, EventArgs e)
         {
             mtbCelClienteBanco.Select(0, 0);

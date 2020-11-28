@@ -17,13 +17,6 @@ namespace ProjetoERP
             InitializeComponent();
         }
 
-
-        private void toolStripButton1_Click(object sender, EventArgs e)
-        {
-            frmCustos frmCustos = new frmCustos();
-            frmCustos.ShowDialog();
-        }
-
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
             frmGerarOrcamento frmGerarOrcamento = new frmGerarOrcamento();
@@ -32,18 +25,13 @@ namespace ProjetoERP
 
         private void toolStripButton2_Click_1(object sender, EventArgs e)
         {
+            //encerra a aplicação
             this.Close();
         }
 
         private void toolStripDropDownButton1_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void toolStripButton4_Click(object sender, EventArgs e)
-        {
-            Form1 frm = new Form1();
-            frm.Show();
         }
 
         private void pesquisaToolStripMenuItem_Click(object sender, EventArgs e)

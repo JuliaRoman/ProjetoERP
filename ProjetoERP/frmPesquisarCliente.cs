@@ -27,6 +27,7 @@ namespace ProjetoERP
 
         private void btnPesquisarNome_Click(object sender, EventArgs e)
         {
+            //pesquisa o cliente de acordo com o nome da textbox e insere os dados nos campos
             string nome = comboBox2.Text;
             string[] valores = new string[5];
             valores = Operacoes.pesquisaClienteNome(nome);
@@ -40,12 +41,14 @@ namespace ProjetoERP
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
+            //salva os dados no cadastro pesquisado
             string id, nome, email, telefone, celular;
             id = textBox1.Text;
             nome = textBox2.Text;
             email = textBox3.Text;
             telefone = maskedTextBox1.Text;
             celular = maskedTextBox2.Text;
+            //if para impedir que seja salvo um cadastro sem nome
             if (String.IsNullOrEmpty(nome))
             {
                 MessageBox.Show("Ao menos o campo 'nome' deve ser inserido!");
@@ -61,6 +64,7 @@ namespace ProjetoERP
 
         private void btnPesquisarId_Click(object sender, EventArgs e)
         {
+            //pesquisa o cliente de acordo com o id da textbox e insere os dados nos campo
             string id = comboBox3.Text;
             string[] valores = new string[5];
             valores = Operacoes.pesquisaClienteId(id);
@@ -74,9 +78,11 @@ namespace ProjetoERP
         private void btnExcluir_Click(object sender, EventArgs e)
         {
             string id = textBox1.Text;
+            //abre caixa de dialogo para confirmar a operação
             DialogResult resultado = MessageBox.Show("Deseja deletar o cadastro " + id + "?", "Delete", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             if (resultado.Equals(DialogResult.OK))
             {
+                //deleta o cadastro pesquisado
                 Operacoes.deletaCliente(id);
                 textBox1.Text = "";
                 textBox2.Text = "";
