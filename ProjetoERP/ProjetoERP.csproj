@@ -48,8 +48,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlClient, Version=4.6.1.2, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SqlClient.4.8.2\lib\net461\System.Data.SqlClient.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -69,11 +76,35 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ERPOrcamentoDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="frmOrçamento.cs">
+    <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmOrçamento.Designer.cs">
-      <DependentUpon>frmOrçamento.cs</DependentUpon>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConfig.Designer.cs">
+      <DependentUpon>frmConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdicionarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdicionarCliente.Designer.cs">
+      <DependentUpon>frmAdicionarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdicionarCusto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdicionarCusto.Designer.cs">
+      <DependentUpon>frmAdicionarCusto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGerarOrcamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGerarOrcamento.Designer.cs">
+      <DependentUpon>frmGerarOrcamento.cs</DependentUpon>
     </Compile>
     <Compile Include="frmCustos.cs">
       <SubType>Form</SubType>
@@ -81,23 +112,17 @@
     <Compile Include="frmCustos.Designer.cs">
       <DependentUpon>frmCustos.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSalvarCadastroCliente.cs">
+    <Compile Include="frmPesquisarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSalvarCadastroCliente.Designer.cs">
-      <DependentUpon>frmSalvarCadastroCliente.cs</DependentUpon>
+    <Compile Include="frmPesquisarCliente.Designer.cs">
+      <DependentUpon>frmPesquisarCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCadastroClientes.cs">
+    <Compile Include="frmPesquisarCusto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCadastroClientes.Designer.cs">
-      <DependentUpon>frmCadastroClientes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmPesquisaClientes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmPesquisaClientes.Designer.cs">
-      <DependentUpon>frmPesquisaClientes.cs</DependentUpon>
+    <Compile Include="frmPesquisarCusto.Designer.cs">
+      <DependentUpon>frmPesquisarCusto.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPrincipal.cs">
       <SubType>Form</SubType>
@@ -105,22 +130,32 @@
     <Compile Include="frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Operacoes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmOrçamento.resx">
-      <DependentUpon>frmOrçamento.cs</DependentUpon>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConfig.resx">
+      <DependentUpon>frmConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAdicionarCliente.resx">
+      <DependentUpon>frmAdicionarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAdicionarCusto.resx">
+      <DependentUpon>frmAdicionarCusto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGerarOrcamento.resx">
+      <DependentUpon>frmGerarOrcamento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCustos.resx">
       <DependentUpon>frmCustos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSalvarCadastroCliente.resx">
-      <DependentUpon>frmSalvarCadastroCliente.cs</DependentUpon>
+    <EmbeddedResource Include="frmPesquisarCliente.resx">
+      <DependentUpon>frmPesquisarCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCadastroClientes.resx">
-      <DependentUpon>frmCadastroClientes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmPesquisaClientes.resx">
-      <DependentUpon>frmPesquisaClientes.cs</DependentUpon>
+    <EmbeddedResource Include="frmPesquisarCusto.resx">
+      <DependentUpon>frmPesquisarCusto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
@@ -133,6 +168,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="ERPOrcamentoDataSet.xsc">
       <DependentUpon>ERPOrcamentoDataSet.xsd</DependentUpon>
@@ -145,6 +181,8 @@
     <None Include="ERPOrcamentoDataSet.xss">
       <DependentUpon>ERPOrcamentoDataSet.xsd</DependentUpon>
     </None>
+    <None Include="ModeloOrcamento.xlsm" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -166,6 +204,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>ERPOrcamento.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\Office-Client-Male-Light-icon.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">

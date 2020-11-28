@@ -17,36 +17,6 @@ namespace ProjetoERP
             InitializeComponent();
         }
 
-        private void btnClientes_Click(object sender, EventArgs e)
-        {
-            frmPesquisaClientes cliente = new frmPesquisaClientes();
-            cliente.Show();
-
-        }
-
-        private void toolStripButton2_Click(object sender, EventArgs e)
-        {
-            frmSalvarCadastroCliente form1 = new frmSalvarCadastroCliente();
-            form1.Show();
-        }
-
-        private void consultaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmPesquisaClientes frmPesquisaClientes = new frmPesquisaClientes();
-            frmPesquisaClientes.ShowDialog();
-        }
-
-        private void cadastroToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            frmSalvarCadastroCliente frmSalvarCadastroCliente = new frmSalvarCadastroCliente();
-            frmSalvarCadastroCliente.ShowDialog();
-        }
-
-        private void generalToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmCadastroClientes frmCadastroClientes = new frmCadastroClientes();
-            frmCadastroClientes.ShowDialog();
-        }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
@@ -56,13 +26,54 @@ namespace ProjetoERP
 
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
-            frmOrçamento frmOrçamento = new frmOrçamento();
-            frmOrçamento.ShowDialog();
+            frmGerarOrcamento frmGerarOrcamento = new frmGerarOrcamento();
+            frmGerarOrcamento.ShowDialog();
         }
 
         private void toolStripButton2_Click_1(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void toolStripDropDownButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripButton4_Click(object sender, EventArgs e)
+        {
+            Form1 frm = new Form1();
+            frm.Show();
+        }
+
+        private void pesquisaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPesquisarCliente frmPesquisarCliente = new frmPesquisarCliente();
+            frmPesquisarCliente.ShowDialog();
+        }
+
+        private void cadastroToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmAdicionarCliente frmAdicionarCliente = new frmAdicionarCliente();
+            frmAdicionarCliente.ShowDialog();
+        }
+
+        private void pesquisaToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmPesquisarCusto frmPesquisarCusto = new frmPesquisarCusto();
+            frmPesquisarCusto.ShowDialog();
+        }
+
+        private void cadastroToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            frmAdicionarCusto frmAdicionarCusto = new frmAdicionarCusto();
+            frmAdicionarCusto.ShowDialog();
+        }
+
+        private void toolStripButton1_Click_1(object sender, EventArgs e)
+        {
+            frmConfig frmConfig = new frmConfig();
+            frmConfig.ShowDialog();
         }
     }
 }

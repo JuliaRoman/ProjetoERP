@@ -26,11 +26,35 @@ namespace ProjetoERP.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\ERPOrcamento." +
-            "mdf;Integrated Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Novo\\source\\repos\\Pr" +
+            "ojetoERP\\ProjetoERP\\ERPOrcamento.mdf;Integrated Security=True")]
         public string ERPOrcamentoConnectionString {
             get {
                 return ((string)(this["ERPOrcamentoConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("a")]
+        public string caminhoExcel {
+            get {
+                return ((string)(this["caminhoExcel"]));
+            }
+            set {
+                this["caminhoExcel"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("a")]
+        public string arquivoModelo {
+            get {
+                return ((string)(this["arquivoModelo"]));
+            }
+            set {
+                this["arquivoModelo"] = value;
             }
         }
     }
