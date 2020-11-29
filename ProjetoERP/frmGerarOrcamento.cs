@@ -73,12 +73,12 @@ namespace ProjetoERP
             bool acabamento = checkBoxAcabamento.Checked; ;
             string tipoPreparacao = comboBoxTipoPreparacao.Text;
             string tipoAcabamento = comboBoxTipoAcabamento.Text;
-            double horasPreparacao = Convert.ToDouble(txbHorasPreparacao);
+            double horasPreparacao = Convert.ToDouble(txbHorasPreparacao.Text);
             double varPreparacao = Convert.ToDouble(txbVariacaoPreparacao.Text);
             double horasAcabamento = Convert.ToDouble(txbHorasAcabamento.Text);
-            double varAcabamento = Convert.ToDouble(txbVariacaoAcabamento);
+            double varAcabamento = Convert.ToDouble(txbVariacaoAcabamento.Text);
             string prazoEntrega = txbPrazoDeEntrega.Text;
-            int condPagamento = Convert.ToInt16(txbCondicaoPagamento.Text);
+            string condPagamento = txbCondicaoPagamento.Text;
             string transporte = comboBoxTransporte.Text;
             double varFinal = Convert.ToDouble(txbVariacaoFinal.Text);
 

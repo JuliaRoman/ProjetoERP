@@ -11,6 +11,9 @@ namespace ProjetoERP
 {
     class Operacoes
     {
+        //String de conexão
+        public static string string_conexao = Properties.Settings.Default.String_conexao;
+      
 
         //método de pesquisa de custo utilizando o nome
         public static string[] pesquisaCustoNome(string nome)
@@ -18,7 +21,7 @@ namespace ProjetoERP
             string[] valores = new string[4];
             try
             {
-                SqlConnection objcon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Novo\source\repos\ProjetoERP\ProjetoERP\ERPOrcamento.mdf;Integrated Security=True");
+                SqlConnection objcon = new SqlConnection(string_conexao);
                 objcon.Open();
 
 
@@ -55,7 +58,7 @@ namespace ProjetoERP
             string[] valores = new string[4];
             try
             {
-                SqlConnection objcon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Novo\source\repos\ProjetoERP\ProjetoERP\ERPOrcamento.mdf;Integrated Security=True");
+                SqlConnection objcon = new SqlConnection(string_conexao);
                 objcon.Open();
 
 
@@ -93,7 +96,7 @@ namespace ProjetoERP
             string[] valores = new string[4];
             try
             {
-                SqlConnection objcon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Novo\source\repos\ProjetoERP\ProjetoERP\ERPOrcamento.mdf;Integrated Security=True");
+                SqlConnection objcon = new SqlConnection(string_conexao);
                 objcon.Open();
 
 
@@ -129,7 +132,7 @@ namespace ProjetoERP
         {
             try
             {
-                SqlConnection objcon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Novo\source\repos\ProjetoERP\ProjetoERP\ERPOrcamento.mdf;Integrated Security=True");
+                SqlConnection objcon = new SqlConnection(string_conexao);
                 objcon.Open();
 
 
@@ -156,7 +159,7 @@ namespace ProjetoERP
         {
             try
             {
-                SqlConnection objcon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Novo\source\repos\ProjetoERP\ProjetoERP\ERPOrcamento.mdf;Integrated Security=True");
+                SqlConnection objcon = new SqlConnection(string_conexao);
                 objcon.Open();
 
 
@@ -181,7 +184,7 @@ namespace ProjetoERP
             string[] valores = new string[4];
             try
             {
-                SqlConnection objcon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Novo\source\repos\ProjetoERP\ProjetoERP\ERPOrcamento.mdf;Integrated Security=True");
+                SqlConnection objcon = new SqlConnection(string_conexao);
                 objcon.Open();
 
 
@@ -210,7 +213,7 @@ namespace ProjetoERP
             string[] valores = new string[5];
             try
             {
-                SqlConnection objcon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Novo\source\repos\ProjetoERP\ProjetoERP\ERPOrcamento.mdf;Integrated Security=True");
+                SqlConnection objcon = new SqlConnection(string_conexao);
                 objcon.Open();
 
 
@@ -248,7 +251,7 @@ namespace ProjetoERP
             string[] valores = new string[5];
             try
             {
-                SqlConnection objcon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Novo\source\repos\ProjetoERP\ProjetoERP\ERPOrcamento.mdf;Integrated Security=True");
+                SqlConnection objcon = new SqlConnection(string_conexao);
                 objcon.Open();
 
 
@@ -285,7 +288,7 @@ namespace ProjetoERP
         {
             try
             {
-                SqlConnection objcon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Novo\source\repos\ProjetoERP\ProjetoERP\ERPOrcamento.mdf;Integrated Security=True");
+                SqlConnection objcon = new SqlConnection(string_conexao);
                 objcon.Open();
 
 
@@ -314,7 +317,7 @@ namespace ProjetoERP
         {
             try
             {
-                SqlConnection objcon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Novo\source\repos\ProjetoERP\ProjetoERP\ERPOrcamento.mdf;Integrated Security=True");
+                SqlConnection objcon = new SqlConnection(string_conexao);
                 objcon.Open();
 
 
@@ -339,7 +342,7 @@ namespace ProjetoERP
             string[] valores = new string[5];
             try
             {
-                SqlConnection objcon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Novo\source\repos\ProjetoERP\ProjetoERP\ERPOrcamento.mdf;Integrated Security=True");
+                SqlConnection objcon = new SqlConnection(string_conexao);
                 objcon.Open();
 
 

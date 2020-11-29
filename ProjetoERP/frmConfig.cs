@@ -50,9 +50,13 @@ namespace ProjetoERP
         {
             string modelo = textBox2.Text;
             string caminho = textBox1.Text;
+            string caminhoBanco = textBox3.Text;
+            string caminhoBancoNovo = (@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename="+caminhoBanco+";Integrated Security=True");
+
             //atualização dos valores de caminhos nas configurações
             Properties.Settings.Default.arquivoModelo = modelo;
             Properties.Settings.Default.caminhoExcel = caminho;
+            Properties.Settings.Default.String_conexao = caminhoBancoNovo;
             Properties.Settings.Default.Save();
             this.Close();
         }
@@ -62,7 +66,28 @@ namespace ProjetoERP
         {
             textBox1.Text = Properties.Settings.Default.caminhoExcel;
             textBox2.Text = Properties.Settings.Default.arquivoModelo;
-            
+            textBox3.Text = Properties.Settings.Default.String_conexao;
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            var fileContent = string.Empty;
+            var filePath = string.Empty;
+
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    filePath = openFileDialog.FileName;
+
+                }
+            }
+            textBox3.Text = filePath;
         }
     }
 }
